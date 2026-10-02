@@ -1,0 +1,62 @@
+name: Bug report
+description: Tell us what went wrong in Crosstalk.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include API keys, tokens, credential files, full private transcripts or private project source.
+        Remove personal paths and account identifiers from screenshots and logs. A synthetic example is best.
+  - type: input
+    id: version
+    attributes:
+      label: Crosstalk version
+      placeholder: Exact version from the installed app
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Operating system and processor
+      placeholder: Windows version, or macOS version and Apple Silicon / Intel
+    validations:
+      required: true
+  - type: textarea
+    id: agents
+    attributes:
+      label: Agent, CLI version and permission settings
+      description: Include Ask first / Read only / Auto edits and Agents decide / One Writer. Do not include sign-in details.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: A small example in a disposable project is most useful. Include whether this was a fresh install or an update.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened
+      description: Include any exact error text and whether files changed, data went missing or an agent kept running.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted evidence
+      description: Optional screenshots or short log excerpts. Check them for secrets and private content before posting.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I checked this report and attachments for secrets and private information.
+          required: true
